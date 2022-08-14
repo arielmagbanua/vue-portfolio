@@ -17,6 +17,10 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </header>
 
+  <h1 class="text-3xl font-bold underline italic">
+    Hello world!
+  </h1>
+
   <RouterView />
 </template>
 
