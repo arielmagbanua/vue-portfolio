@@ -15,7 +15,6 @@ export default {
 
 <template>
   <div class="w-screen h-screen">
-    <!-- I've set max-w-screen-md, you may need to change it -->
     <nav class="px-6 py-8 mx-auto md:flex md:justify-between md:items-center bg-gray-100">
       <div class="flex items-center justify-between">
         <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400">
