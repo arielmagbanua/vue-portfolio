@@ -1,85 +1,55 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+
+</script>
+
+<script lang="ts">
+export default {
+  data() {
+    return {
+      showMenu: false,
+    }
+  },
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="w-screen h-screen">
+    <!-- I've set max-w-screen-md, you may need to change it -->
+    <nav class="px-6 py-8 mx-auto md:flex md:justify-between md:items-center bg-gray-100">
+      <div class="flex items-center justify-between">
+        <router-link to="/" class="text-xl font-bold text-gray-800 md:text-2xl hover:text-blue-400">
+          Ariel.
+        </router-link>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+        <!-- Mobile menu button -->
+        <div @click="showMenu = !showMenu" class="flex md:hidden">
+          <button type="button" class="text-gray-800 hover:text-gray-400 focus:outline-none focus:text-gray-400">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+              <path fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+      <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+      <ul :class="showMenu ? 'flex' : 'hidden'"
+        class="flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+        <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
+          <router-link to="/" class="text-sm font-bold text-gray-800 hover:text-blue-400">
+            Home
+          </router-link>
+        </li>
+        <li class="text-sm font-bold text-gray-800 hover:text-blue-400">
+          <router-link to="/projects" class="text-sm font-bold text-gray-800 hover:text-blue-400">
+            Projects
+          </router-link>
+        </li>
+      </ul>
+    </nav>
 
-  <RouterView />
+    <RouterView />
+  </div>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>
