@@ -6,15 +6,12 @@ import Introduction from '@/components/Introduction.vue';
   <main class="container py-16">
     <div class="grid grid-cols-2">
       <div class="grid grid-cols-1">
-        <Introduction />
+        <introduction />
         <!-- Education and Contact Info -->
-        <div id="contact-and-education">
-          
-        </div>
       </div>
     </div>
     <div class="skills">
-
+      <p>Skills here</p>
     </div>
   </main>
 </template>

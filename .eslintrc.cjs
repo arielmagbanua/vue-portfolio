@@ -14,7 +14,6 @@ module.exports = {
   },
   rules: {
     quotes: ['error', 'single',],
-    semi: ['error', 'always',],
-    'comma-dangle': ['error', 'always',],
+    semi: ['error', 'always',]
   },
 };
