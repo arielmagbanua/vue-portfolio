@@ -24,7 +24,7 @@ export default {
     </div>
 
     <div>
-      <h1 class="text-gray-800 text-4xl pb-4">
+      <h1 class="text-gray-800 text-4xl pb-4 font-semibold">
         Hello!
       </h1>
       <p class="text-gray-800">
