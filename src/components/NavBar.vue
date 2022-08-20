@@ -14,7 +14,7 @@ export default {
 
 <template>
   <nav
-    class="px-6 lg:px-32 md:px-16 py-8 mx-auto md:flex md:justify-between md:items-center bg-gray-100"
+    class="px-6 lg:px-48 md:px-16 py-8 mx-auto md:flex md:justify-between md:items-center bg-gray-100 drop-shadow-md"
   >
     <div class="flex items-center justify-between">
       <router-link
@@ -56,7 +56,7 @@ export default {
           to="/"
           class="text-sm font-bold text-gray-800 hover:text-blue-400"
         >
-          Home
+          About
         </router-link>
       </li>
       <li class="text-sm font-bold text-gray-800 hover:text-blue-400">

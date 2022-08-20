@@ -1,15 +1,17 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
-</template>
+<script setup lang="ts">
+import ProfileIntroduction from '@/components/ProfileIntroduction.vue';
+</script>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<template>
+  <main class="container py-16">
+    <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1">
+        <ProfileIntroduction />
+        <!-- Education and Contact Info -->
+      </div>
+    </div>
+    <div class="skills">
+      <p>Skills here</p>
+    </div>
+  </main>
+</template>
