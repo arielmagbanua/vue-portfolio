@@ -8,6 +8,9 @@ import Introduction from '@/components/Introduction.vue';
       <div class="grid grid-cols-1">
         <Introduction />
         <!-- Education and Contact Info -->
+        <div id="contact-and-education">
+          
+        </div>
       </div>
     </div>
     <div class="skills">
