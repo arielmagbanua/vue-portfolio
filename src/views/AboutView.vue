@@ -1,9 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Introduction from '@/components/Introduction.vue';
+</script>
 
 <template>
-  <main class="container my-5">
-    <h1 class="text-black">
-      Home...
-    </h1>
+  <main class="container py-16">
+    <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1">
+        <Introduction />
+        <!-- Education and Contact Info -->
+      </div>
+    </div>
+    <div class="skills">
+
+    </div>
   </main>
 </template>
