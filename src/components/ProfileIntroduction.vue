@@ -2,7 +2,6 @@
 import profileImage from '../assets/id.jpg';
 
 export default {
-  name: 'introduction',
   data() {
     return {
       profileImage: profileImage,

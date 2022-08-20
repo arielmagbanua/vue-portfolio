@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import Introduction from '@/components/Introduction.vue';
+import ProfileIntroduction from '@/components/ProfileIntroduction.vue';
 </script>
 
 <template>
   <main class="container py-16">
     <div class="grid grid-cols-2">
       <div class="grid grid-cols-1">
-        <introduction />
+        <ProfileIntroduction />
         <!-- Education and Contact Info -->
       </div>
     </div>
